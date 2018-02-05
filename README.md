@@ -1,6 +1,8 @@
 Dots and Boxes application
 ==========================
 
+![Screenshot of Dots and Boxes](https://people.cs.kuleuven.be/wannes.meert/dotsandboxes/screenshot.png)
+
 Dependencies
 ------------
 
