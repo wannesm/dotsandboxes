@@ -3,17 +3,18 @@ Dots and Boxes application
 
 ![Screenshot of Dots and Boxes](https://people.cs.kuleuven.be/wannes.meert/dotsandboxes/screenshot.png)
 
-Dependencies
+This template is part of the course "Machine Learning: Project" (KU Leuven,
+Faculty of engineering, Department of Computer Science,
+[DTAI research group](https://dtai.cs.kuleuven.be)).
+
+
+Installation
 ------------
 
 The Python template requires the [websockets](https://websockets.readthedocs.io)
 package. Dependencies can be installed using pip:
 
     $ pip install -r requirements.txt
-
-If you add any dependencies make sure to update the `requirements.txt` file if
-you use Python or include the dependencies file used by your environment of
-choice (e.g. `package.json`, `Cargo.toml`).
 
 
 Start the game GUI
@@ -107,4 +108,11 @@ When the game ends, the following message is send:
         "game": 123456,
         "winner": 1
     }
+
+
+Contact information
+-------------------
+
+- Wannes Meert, https://people.cs.kuleuven.be/wannes.meert
+- Hendrik Blockeel, https://people.cs.kuleuven.be/hendrik.blockeel
 
