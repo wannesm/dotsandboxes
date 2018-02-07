@@ -26,8 +26,8 @@ var cur_player = 1;
 var cur_ended = false;
 var points = [0, 0, 0];
 var timelimit = 0.5;
-var nb_cols = 2;
-var nb_rows = 2;
+var nb_cols = 6;
+var nb_rows = 6;
 var data = new Array(0);
 
 function restart_game() {
@@ -35,11 +35,11 @@ function restart_game() {
   cur_game = generateGuid();
   nb_cols = parseInt(document.getElementById('nb-cols').value);
   if (nb_cols == "" || isNaN(nb_cols)) {
-    nb_cols = 2;
+    nb_cols = 6;
   }
   nb_rows = parseInt(document.getElementById('nb-rows').value);
   if (nb_rows == "" || isNaN(nb_rows)) {
-    nb_rows = 2;
+    nb_rows = 6;
   }
   cur_ended = false;
   console.log("Starting game", cur_game);
