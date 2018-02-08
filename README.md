@@ -3,7 +3,7 @@ Dots and Boxes application
 
 ![Screenshot of Dots and Boxes](https://people.cs.kuleuven.be/wannes.meert/dotsandboxes/screenshot.png?v=2)
 
-This template is part of the course "Machine Learning: Project" (KU Leuven,
+This setup is part of the course "Machine Learning: Project" (KU Leuven,
 Faculty of engineering, Department of Computer Science,
 [DTAI research group](https://dtai.cs.kuleuven.be)).
 
@@ -35,11 +35,11 @@ The game can then be played by directing your browser to http://127.0.0.1:8080.
 Start the agent client
 ----------------------
 
-This is the program that controls one of the two game-playing agents. This application
-listens to websocket requests that communicate game information and sends
-back the next action.
+This is the program that runs a game-playing agents. This application listens
+to websocket requests that communicate game information and sends back the next
+action it wants to play.
 
-Starting the agent client should be possible by using the following command:
+Starting the agent client is done using the following command:
 
     $ ./dotsandboxesagent <port>
 
@@ -87,7 +87,7 @@ When an action is played, the message send to both players is:
         "orientation": "v"
     }
 
-The `location` is expressed as row and column and `orientiation` is either
+The `location` is expressed as row and column and `orientation` is either
 "v" or "h".
 
 If it is your turn you should answer with a message that states your next
@@ -122,6 +122,9 @@ that has won the game.
 Contact information
 -------------------
 
-- Wannes Meert, https://people.cs.kuleuven.be/wannes.meert
-- Hendrik Blockeel, https://people.cs.kuleuven.be/hendrik.blockeel
+- Wannes Meert,        https://people.cs.kuleuven.be/wannes.meert
+- Hendrik Blockeel,    https://people.cs.kuleuven.be/hendrik.blockeel
+- Arne De Brabandere,  https://people.cs.kuleuven.be/arne.debrabandere
+- Sebastijan Dumančić, https://people.cs.kuleuven.be/sebastijan.dumancic
+- Pieter Robberechts,  https://people.cs.kuleuven.be/pieter.robberechts
 
