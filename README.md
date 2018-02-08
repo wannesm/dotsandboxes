@@ -11,8 +11,9 @@ Faculty of engineering, Department of Computer Science,
 Installation
 ------------
 
-The Python template requires the [websockets](https://websockets.readthedocs.io)
-package. Dependencies can be installed using pip:
+The example agent is designed for Python 3 and requires the
+[websockets](https://websockets.readthedocs.io) package. Dependencies can be
+installed using pip:
 
     $ pip install -r requirements.txt
 
