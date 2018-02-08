@@ -20,6 +20,7 @@ import random
 
 logger = logging.getLogger(__name__)
 games = {}
+agentclass = None
 
 
 class DotsAndBoxesAgent:
@@ -124,10 +125,10 @@ async def handler(websocket, path):
                     games[msg["game"]].add_player(msg["player"])
                 else:
                     nb_rows, nb_cols = msg["grid"]
-                    games[msg["game"]] = DotsAndBoxesAgent(msg["player"],
-                                                           nb_rows,
-                                                           nb_cols,
-                                                           msg["timelimit"])
+                    games[msg["game"]] = agentclass(msg["player"],
+                                                    nb_rows,
+                                                    nb_cols,
+                                                    msg["timelimit"])
                 if msg["player"] == 1:
                     # Start the game
                     nm = games[game].next_action()
@@ -193,6 +194,7 @@ def start_server(port):
 ## COMMAND LINE INTERFACE
 
 def main(argv=None):
+    global agentclass
     parser = argparse.ArgumentParser(description='Start agent to play Dots and Boxes')
     parser.add_argument('--verbose', '-v', action='count', default=0, help='Verbose output')
     parser.add_argument('--quiet', '-q', action='count', default=0, help='Quiet output')
@@ -202,6 +204,7 @@ def main(argv=None):
     logger.setLevel(max(logging.INFO - 10 * (args.verbose - args.quiet), logging.DEBUG))
     logger.addHandler(logging.StreamHandler(sys.stdout))
 
+    agentclass = DotsAndBoxesAgent
     start_server(args.port)
 
 
