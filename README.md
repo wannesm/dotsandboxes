@@ -102,13 +102,21 @@ move:
 
 ### Game end
 
-When the game ends, the following message is send:
+When the game ends after an action, the message is slightly altered:
 
     {
-        "type": "end",
-        "game": 123456,
+        "type": "end,
+        "game": "123456",
+        "player": 1,
+        "nextplayer": 0,
+        "score": [3, 1],
+        "location": [1, 1],
+        "orientation": "v",
         "winner": 1
     }
+
+The `type` field becomes `end` and a new field `winner` is set to the player
+that has won the game.
 
 
 Contact information

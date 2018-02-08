@@ -160,6 +160,8 @@ function user_click(cell, o) {
     }
   }
 
+  msg["score"] = [points[1], points[2]];
+
   if (!won_cell) {
     cur_player = 3 - cur_player;
     msg.nextplayer = cur_player;
@@ -175,11 +177,9 @@ function user_click(cell, o) {
       winner = 2;
     }
     cur_ended = true;
-    msg = {
-      type: "end",
-      game: cur_game,
-      winner: winner
-    };
+    msg.type = "end";
+    msg.nextplayer = 0;
+    msg.winner = winner;
   }
   send_to_agents(msg);
 }

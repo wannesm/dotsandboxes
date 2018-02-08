@@ -111,6 +111,11 @@ async def connect_agent(uri1, uri2, nb_rows, nb_cols, timelimit):
             msg = {
                 "type": "end",
                 "game": cur_game,
+                "player": cur_player,
+                "nextplayer": 0,
+                "score": [points[1], points[2]],
+                "location": [r, c],
+                "orientation": o,
                 "winner": winner
             }
             await websocket1.send(json.dumps(msg))
