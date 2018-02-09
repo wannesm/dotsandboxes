@@ -72,6 +72,9 @@ If you are player 1, reply with the first action you want to perform:
         "orientation": "v"
     }
 
+The field `location` is expressed as row and column (zero-based numbering) and
+`orientation` is either "v" (vertical) or "h" (horizontal).
+
 
 ### Action in the game
 
@@ -87,8 +90,6 @@ When an action is played, the message send to both players is:
         "orientation": "v"
     }
 
-The `location` is expressed as row and column and `orientation` is either
-"v" or "h".
 
 If it is your turn you should answer with a message that states your next
 move:
