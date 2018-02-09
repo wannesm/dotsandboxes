@@ -35,7 +35,7 @@ The game can then be played by directing your browser to http://127.0.0.1:8080.
 Start the agent client
 ----------------------
 
-This is the program that runs a game-playing agents. This application listens
+This is the program that runs a game-playing agent. This application listens
 to websocket requests that communicate game information and sends back the next
 action it wants to play.
 
