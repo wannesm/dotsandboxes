@@ -67,7 +67,7 @@ and `grid` is the grid size in rows and columns.
 If you are player 1, reply with the first action you want to perform:
 
     {
-        "type": "action,
+        "type": "action",
         "location": [1, 1],
         "orientation": "v"
     }
@@ -75,10 +75,10 @@ If you are player 1, reply with the first action you want to perform:
 
 ### Action in the game
 
-When an action is played, the message send to both players is:
+When an action is played, the message sent to both players is:
 
     {
-        "type": "action,
+        "type": "action",
         "game": "123456",
         "player": 1,
         "nextplayer": 2,
@@ -94,7 +94,7 @@ If it is your turn you should answer with a message that states your next
 move:
 
     {
-        "type": "action,
+        "type": "action",
         "location": [1, 1],
         "orientation": "v"
     }
@@ -105,7 +105,7 @@ move:
 When the game ends after an action, the message is slightly altered:
 
     {
-        "type": "end,
+        "type": "end",
         "game": "123456",
         "player": 1,
         "nextplayer": 0,
