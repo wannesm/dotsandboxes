@@ -35,7 +35,7 @@ The game can then be played by directing your browser to http://127.0.0.1:8080.
 Start the agent client
 ----------------------
 
-This is the program that runs a game-playing agents. This application listens
+This is the program that runs a game-playing agent. This application listens
 to websocket requests that communicate game information and sends back the next
 action it wants to play.
 
@@ -67,7 +67,7 @@ and `grid` is the grid size in rows and columns.
 If you are player 1, reply with the first action you want to perform:
 
     {
-        "type": "action,
+        "type": "action",
         "location": [1, 1],
         "orientation": "v"
     }
@@ -78,10 +78,10 @@ The field `location` is expressed as row and column (zero-based numbering) and
 
 ### Action in the game
 
-When an action is played, the message send to both players is:
+When an action is played, the message sent to both players is:
 
     {
-        "type": "action,
+        "type": "action",
         "game": "123456",
         "player": 1,
         "nextplayer": 2,
@@ -95,7 +95,7 @@ If it is your turn you should answer with a message that states your next
 move:
 
     {
-        "type": "action,
+        "type": "action",
         "location": [1, 1],
         "orientation": "v"
     }
@@ -106,7 +106,7 @@ move:
 When the game ends after an action, the message is slightly altered:
 
     {
-        "type": "end,
+        "type": "end",
         "game": "123456",
         "player": 1,
         "nextplayer": 0,
