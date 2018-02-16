@@ -1,6 +1,8 @@
 Dots and Boxes application
 ==========================
 
+Live demo: https://people.cs.kuleuven.be/wannes.meert/dotsandboxes/play
+
 ![Screenshot of Dots and Boxes](https://people.cs.kuleuven.be/wannes.meert/dotsandboxes/screenshot.png?v=2)
 
 This setup is part of the course "Machine Learning: Project" (KU Leuven,
