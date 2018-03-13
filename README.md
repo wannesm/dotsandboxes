@@ -38,8 +38,9 @@ Start the agent client
 ----------------------
 
 This is the program that runs a game-playing agent. This application listens
-to websocket requests that communicate game information and sends back the next
-action it wants to play.
+to [websocket](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API)
+requests that communicate game information and sends back the next action it
+wants to play.
 
 Starting the agent client is done using the following command:
 
