@@ -190,13 +190,13 @@ var cell_margin = 4;
 var player_height = 40;
 var width = 400;
 var height = 600;
-var line_width = 5
+var line_width = 5;
 
 var player_color = [
   "#E6E6E6",
   "#FC6666",
   "#0F80FF"
-]
+];
 
 var svg = d3.select("#playing-area").append("svg")
   .attr("width", width)
@@ -355,7 +355,7 @@ var agents = [
   {},
   {address: undefined, active: false, socket: undefined},
   {address: undefined, active: false, socket: undefined}
-]
+];
 
 var msg_queue = [];
 
@@ -397,7 +397,7 @@ function start_connections() {
           "timelimit": timelimit,
           "game": cur_game,
           "grid": [nb_rows, nb_cols]
-        }
+        };
         iagent.socket.send(JSON.stringify(msg));
       };}(i, agent));
     }
@@ -452,4 +452,3 @@ restartbtn.onclick = function() {
 };
 
 restart();
-

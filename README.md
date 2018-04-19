@@ -13,7 +13,7 @@ Faculty of engineering, Department of Computer Science,
 Installation
 ------------
 
-The example agent is designed for Python 3.7 and requires the
+The example agent is designed for Python 3.6 and requires the
 [websockets](https://websockets.readthedocs.io) package. Dependencies can be
 installed using pip:
 
