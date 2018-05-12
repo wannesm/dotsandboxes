@@ -29,17 +29,30 @@ var timelimit = 0.5;
 var nb_cols = 6;
 var nb_rows = 6;
 var data = new Array(0);
+var alertstring = "";
 
 function restart_game() {
   //console.log("Restarting game");
   cur_game = generateGuid();
+  alertstring = "";
   nb_cols = parseInt(document.getElementById('nb-cols').value);
-  if (nb_cols == "" || isNaN(nb_cols)) {
+  if (nb_cols == "" || isNaN(nb_cols) || nb_cols < 1) {
     nb_cols = 6;
+    alertstring += "Invalid number of columns, the default value of " + nb_cols.toString() + " is applied. ";
   }
   nb_rows = parseInt(document.getElementById('nb-rows').value);
-  if (nb_rows == "" || isNaN(nb_rows)) {
+  if (nb_rows == "" || isNaN(nb_rows) || nb_rows < 1) {
     nb_rows = 6;
+    alertstring += "Invalid number of rows, the default value of " + nb_rows.toString() + " is applied. ";
+
+  }
+  timelimit = parseFloat(document.getElementById('timelimit').value);
+  if (timelimit == "" || isNaN(timelimit) || timelimit < 0) {
+    timelimit = 0.5 ;
+    alertstring += "Invalid time limit, the default value of " + timelimit.toString() + " is applied. ";
+  }
+  if (alertstring != ""){
+    alert(alertstring);
   }
   cur_ended = false;
   console.log("Starting game", cur_game);
