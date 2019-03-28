@@ -38,9 +38,9 @@ class RequestHandler(http.server.SimpleHTTPRequestHandler):
 
 
 def start_server(port):
-    with socketserver.TCPServer(("", port), RequestHandler) as httpd:
-        print("Running on http://127.0.0.1:{}".format(port))
-        httpd.serve_forever()
+    httpd = socketserver.TCPServer(("", port), RequestHandler)
+    print("Running on http://127.0.0.1:{}".format(port))
+    httpd.serve_forever()
 
 
 def main(argv=None):

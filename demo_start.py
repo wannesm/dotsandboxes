@@ -54,7 +54,7 @@ def start_agent_oris(port):
     logger.info("Starting agent Oris on:\n==> ws://localhost:{}".format(port))
     cmd = ["java", "-jar", "dotsandboxes.jar", str(port)]
     logger.info(" ".join(cmd))
-    sp.run(cmd, cwd=script_loc)
+    sp.run(cmd, cwd=str(script_loc))
 
 
 @agent
@@ -63,7 +63,7 @@ def start_agent_vandenberg(port):
     logger.info("Starting agent van den Berg on:\n==> ws://localhost:{}".format(port))
     cmd = ["python3", "dotsandboxesagent.py", str(port)]
     logger.info(" ".join(cmd) + " -- cwd = {}".format(script_loc))
-    sp.run(cmd, cwd=script_loc)
+    sp.run(cmd, cwd=str(script_loc))
 
 
 @agent
@@ -72,7 +72,7 @@ def start_agent_baert_caerts(port):
     logger.info("Starting agent Baert & Caerts on:\n==> ws://localhost:{}".format(port))
     cmd = ["java", "-jar", "agent.jar", "-p", str(port)]
     logger.info(" ".join(cmd))
-    sp.run(cmd, cwd=script_loc)
+    sp.run(cmd, cwd=str(script_loc))
 
 
 def start_agents():
