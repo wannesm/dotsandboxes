@@ -21,7 +21,11 @@ logger = logging.getLogger(__name__)
 
 class RequestHandler(http.server.SimpleHTTPRequestHandler):
     def do_GET(self):
-        if self.path == "/":
+        if self.path == "/demo":
+            self.send_response(302)
+            self.send_header("Location", "/static/demo.html")
+            self.end_headers()
+        elif self.path == "/":
             self.send_response(302)
             self.send_header("Location", "/static/dotsandboxes.html")
             self.end_headers()
